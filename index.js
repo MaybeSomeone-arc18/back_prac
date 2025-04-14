@@ -5,6 +5,10 @@ const PORT = 3000;
 app.use(express.json());
 
 const users = [];
+app.get('/', (req, res) => {
+    res.send("API is working fine!");
+  });
+  
 
 app.get('/search', (req, res) => {
   const name = req.query.name;
